@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>MAST: A Memory-Augmented Self-supervised Tracker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Loading Bootstrap -->
+	<link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<style type="text/css">
+	.video-responsive{
+		overflow:hidden;
+		padding-bottom:56.25%;
+		position:relative;
+		height:0;
+	}
+	.video-responsive iframe{
+		left:0;
+		top:0;
+		height:100%;
+		width:100%;
+		position:absolute;
+	}
+	</style>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+	<div class="container">
+		<div class="">
+			<h3 class="text-center">MAST: A Memory-Augmented Self-supervised Tracker</h3>
+			<p class="text-center">Zihang Lai, Erika Lu, Weidi Xie</p>
+
+			<p class="text-center">Visual Geometry Group, Department of Engineering Science, University of Oxford </p>
+			<p class="text-center"><b>CVPR 2020</b></p>
+
+		</div>
+
+		<div class="container col-md-offset-1 col-md-10">
+				<div class="col-xs-6">
+					<div class="row">
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+					<img class="img-responsive" src="img/davis1.gif">
+				</div>
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+					<img class="img-responsive" src="img/davis2.gif">
+					</div>
+				</div><br>
+				<div class="row">
+
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+					<img class="img-responsive" src="img/davis3.gif">
+				</div>
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+				<img class="img-responsive" src="img/davis4.gif">
+				</div>
+
+				</div>
+				<p class="text-center">DAVIS-2017 Video Segmentation </p>
+
+				</div>
+
+				<div class="col-xs-6">
+				<div class="row">
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+					<img class="img-responsive" src="img/ytvos1.gif">
+				</div>
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+					<img class="img-responsive" src="img/ytvos2.gif">
+				</div>
+				</div><br>
+				<div class="row">
+
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+					<img class="img-responsive" src="img/ytvos4.gif">
+				</div>
+				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-6">
+					<img class="img-responsive" src="img/ytvos5.gif">
+				</div>
+				<p class="text-center">Youtube-VOS 2018 Video Segmentation </p>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="col-md-10 col-md-offset-1">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Abstract</div>
+
+				<div class="panel-body">
+					<p class="small">The objective of this paper is self-supervised learning of feature embeddings that are suitable for matching correspondences along the videos, which we term correspondence flow. By leveraging the natural spatial-temporal coherence in videos, we propose to train a “pointer” that reconstructs a target frame by copying pixels from a reference frame. 
+
+						<br>We make the following contributions: First, we introduce a simple information bottleneck that forces the model to learn robust features for correspondence matching, and prevent it from learning trivial solutions, e.g. matching based on low-level colour information. Second, to tackle the challenges from tracker drifting, due to complex object deformations, illumination changes and occlusions, we propose to train a recursive model over long temporal windows with scheduled sampling and cycle consistency. Third, we achieve state-of-the-art performance on DAVIS 2017 video segmentation and JHMDB keypoint tracking tasks, outperforming all previous self-supervised learning approaches by a significant margin. Fourth, in order to shed light on the potential of self-supervised learning on the task of video correspondence flow, we probe the upper bound by training on additional data, i.e. more diverse videos, further demonstrating
+significant improvements on video segmentation. 
+					</p>
+					<pre>@inproceedings{Lai20,
+  title={MAST: A Memory-Augmented Self-supervised Tracker},
+  author={Lai, Zihang and Lu, Erika and Xie, Weidi},
+  booktitle={CVPR},
+  year={2020}
+}
+</pre>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Video</div>
+
+				<div class="panel-body text-center">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/r4SxiGVVd6Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>		
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Downloads</div>
+
+				<div class="panel-body">
+					<ul>
+						<li><b>Paper: </b> <a href="https://arxiv.org/abs/2002.07793">ArXiv</a></li>
+						<li><b>Code + Pretrained model: </b> <a href="https://github.com/zlai0/MAST">GitHub</a></li>
+						<li><b>Dataset: </b> 
+							<a href="https://deepmind.com/research/open-source/open-source-datasets/kinetics/">Kinetics</a>, 
+							<a href="https://davischallenge.org/davis2017/code.html">DAVIS-2017</a>,
+							<a href="https://oxuva.github.io/long-term-tracking-benchmark/">OxUvA</a>
+						</li>
+					</ul>
+					Please contact zihang.lai at gmail.com if you have any questions.
+				</div>
+			</div>		
+			<div class="panel panel-default">
+				<div class="panel-heading">Results</div>
+
+				<div class="panel-body">
+					<div class="col-md-10 col-md-offset-1">
+
+					<img class="img-responsive" src="img/structure.png">
+					<p class="text-center"> . </p>
+					</div>
+
+					<div class="col-md-4">
+					<img class="img-responsive" src="img/results1.png">
+					<p class="text-center"> Video segmentation results on Youtube-VOS 2018 dataset. </p>
+					</div>
+
+					<div class="col-md-8">
+					<img class="img-responsive" src="img/results2.png">
+					<p class="text-center">Video segmentation results on DAVIS-2017 dataset. Higher values are better.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="panel panel-default">
+				<div class="panel-heading"><b>Acknowledgements</b></div>
+
+				<div class="panel-body">
+					The authors would like to thank Andrew Zisserman for helpful discussions, Olivia Wiles, Shangzhe Wu, Sophia Koepke and Tengda Han for proofreading. Financial support for this project is provided by <a href="http://www.robots.ox.ac.uk/~vgg/projects/seebibyte/">EPSRC Seebibyte Grant EP/M013774/1</a>. Erika Lu is funded by the Oxford-Google DeepMind Graduate Scholarship.
+
+				</div>
+			</div>		
+
+		<!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+		<script src="js/vendor/jquery.min.js"></script>
+	</body>
+	</html>
