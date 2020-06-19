@@ -1,0 +1,4 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 python3 main_oxuva.py  --datapath /mnt/ssd/oxuva/all --validpath /mnt/2TB-1/datasets/DAVIS-2017 --bsize 8 --savepath results/071501 --fullcolor
+x CUDA_VISIBLE_DEVICES=1 python3 main_oxuva.py  --validpath /scratch/local/ssd/zlai/DAVIS-2017 --bsize 18 --savepath results/071601 --gumbel
+CUDA_VISIBLE_DEVICES=0,2,3 python3 main_oxuva.py  --validpath /scratch/local/ssd/zlai/DAVIS-2017 --bsize 18 --savepath results/071602 --gumbel --resume results/071101/checkpoint.tar
+CUDA_VISIBLE_DEVICES=0,1 python3 main_oxuva.py  --datapath /scratch/local/ssd/zlai/all/ --validpath /scratch/local/ssd/zlai/DAVIS-2017 --bsize 18 --savepath /scratch/local/ssd/zlai/results/080201 --photo

@@ -1,0 +1,5 @@
+spatial-correlation-sampler==0.0.8
+future
+matplotlib
+opencv-python
+scikit-image
