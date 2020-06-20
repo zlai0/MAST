@@ -70,3 +70,12 @@ For benchmark the full model, you need a GPU with ~22G memory for the test. If t
     ```
 ### Pretrained model 
 [Google drive](https://drive.google.com/file/d/1vjiBdom75QzwCF5jnMRsxz897XyotVO8/view?usp=sharing)
+
+### Results
+Comparison with other methods on DAVIS-2017             |  Results on Youtube-VOS and Generalization ability
+:-------------------------:|:-------------------------:
+![](figures/fig1.png)  |  ![](figures/table8.png)
+
+Video segmentation results on DAVIS-2017  |
+:-------------------------:|
+![](figures/table1.png) |
