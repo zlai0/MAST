@@ -39,7 +39,7 @@ Recent interest in self-supervised dense tracking has yielded rapid progress, bu
 ### Dependencies
 
 - [Python3.7](https://www.python.org/downloads/)
-- [PyTorch(1.1.0)](http://pytorch.org) Note you need PyTorch 1.1 to get the correct training result. We tried PyTorch 1.4 but it seems that the network fails to converge. Let me know if you know what might be the reason. Testing  seems fine under 1.4 though. 
+- [PyTorch(1.1.0)](http://pytorch.org) **Note you need PyTorch 1.1 to get the correct training result.** We tried PyTorch 1.4 but it seems that the network fails to converge. Let me know if you know what might be the reason. Testing  seems fine under 1.4 though. 
 - [Pytorch Correlation module (0.0.8)](https://github.com/ClementPinard/Pytorch-Correlation-extension) It appears that there are some problem with installing this module. I also failed to install it on one of my machines. Make sure you pass ```python check.py forward``` and ```python check.py backward``` (this code comes from the ClementPinard's github page) before training or testing.
 - CUDA 10.0
 - [OxUvA dataset](https://oxuva.github.io/long-term-tracking-benchmark/)
